@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chaithanyahanuweb1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chaithanyahanuweb1
+  template:
+    metadata:
+      labels:
+        app: chaithanyahanuweb1 
+    spec:
+      containers:
+        - name: chaithanyahanuweb1 
+          image: demored678.azurecr.io/chaithanyahanuweb1
+          ports:
+          - containerPort: 80
